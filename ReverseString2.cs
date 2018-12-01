@@ -1,9 +1,3 @@
-/* Program to Reverse a String without using String.Reverse(). 
- * Code sample is from Stack Overflow, I've modified UI and sample code. 
- * www.stackoverflow.com/questions/16962322/
- * Trevor Heehs 
-*/
-
 using System;
 
 namespace StringWork
@@ -27,20 +21,15 @@ namespace StringWork
                 }
                 else
                 {
-                    reverseString(userInput);
+                    ReverseStringChar(userInput);
                 }
             }
         }
-
-        static void reverseString(string inputString)
+        static string ReverseStringChar(string s)
         {
-            string result = string.Empty;
-
-            foreach (char c in inputString)
-            {
-                result = c + result;
-            }
-            Console.WriteLine(result + "\n");
+            char[] arr = s.ToCharArray();
+            Array.Reverse(arr);
+            return new string(arr);
         }
     }
 }
