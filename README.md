@@ -1,0 +1,3 @@
+# This repo contains sample programs for school. 
+
+Feel free to check em out, nothing special here...
