@@ -28,15 +28,16 @@ namespace StringWork
                 }
                 else
                 {
-                    ReverseStringChar(userInput);
+                    string result = ReverseCharArray(userInput);
+                    Console.WriteLine(result);
                 }
             }
         }
-        static void ReverseStringChar(string s)
+        static string ReverseCharArray(string s)
         {
             char[] arr = s.ToCharArray();
             Array.Reverse(arr);
-            Console.WriteLine(arr);
+            return new string(arr);
         }
     }
 }

@@ -27,12 +27,13 @@ namespace StringWork
                 }
                 else
                 {
-                    reverseString(userInput);
+                    string reversedString = ReverseString(userInput);
+                    Console.WriteLine(reversedString);
                 }
             }
         }
 
-        static void reverseString(string inputString)
+        static string ReverseString(string inputString)
         {
             string result = string.Empty;
 
@@ -40,7 +41,7 @@ namespace StringWork
             {
                 result = c + result;
             }
-            Console.WriteLine(result + "\n");
+            return result + "\n";
         }
     }
 }
