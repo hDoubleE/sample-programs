@@ -1,4 +1,4 @@
-/* Program to Reverse a String without using String.Reverse(). 
+/* Program to Reverse a string without using any built in methods. 
  * Code sample is from Stack Overflow, I've modified UI and sample code. 
  * www.stackoverflow.com/questions/16962322/
  * Trevor Heehs 
@@ -27,13 +27,12 @@ namespace StringWork
                 }
                 else
                 {
-                    string reversedString = ReverseString(userInput);
-                    Console.WriteLine(reversedString);
+                    reverseString(userInput);
                 }
             }
         }
 
-        static string ReverseString(string inputString)
+        static void reverseString(string inputString)
         {
             string result = string.Empty;
 
@@ -41,7 +40,7 @@ namespace StringWork
             {
                 result = c + result;
             }
-            return result + "\n";
+            Console.WriteLine(result + "\n");
         }
     }
 }
