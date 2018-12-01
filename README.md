@@ -1,3 +1,5 @@
-# This repo contains sample programs for school. 
+# Sample Programs
 
-Feel free to check em out, nothing special here...
+This repo contains C# sample programs for school. 
+
+Feel free to check em out and do whatever you want with em, nothing special...
