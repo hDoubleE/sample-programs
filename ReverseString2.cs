@@ -1,8 +1,15 @@
+/* Reverse string using built in Array.Reverse method.
+ * No source provided, multiple references provide this 
+ * as primary method for reversing a string. 
+ * Trevor Heehs
+ */
+
+
 using System;
 
 namespace StringWork
 {
-    class Program
+    class StringReverse
     {
         static void Main()
         {
@@ -25,11 +32,11 @@ namespace StringWork
                 }
             }
         }
-        static string ReverseStringChar(string s)
+        static void ReverseStringChar(string s)
         {
             char[] arr = s.ToCharArray();
             Array.Reverse(arr);
-            return new string(arr);
+            Console.WriteLine(arr);
         }
     }
 }
