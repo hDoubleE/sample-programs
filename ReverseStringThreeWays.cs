@@ -1,3 +1,10 @@
+/* This program uses three methods to reverse a string. 
+* The RevString1 and RevString2 methods do not use built-in methods. 
+* RevString3 represents is the "normal" way to reverse a string.
+* Source: www.stackoverflow.com/questions/16962322/
+*/ Trevor Heehs
+
+
 using System;
 
 namespace ReverseString
