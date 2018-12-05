@@ -16,8 +16,17 @@ namespace ReverseString
             Console.WriteLine(RevString1("Hello World"));
             Console.WriteLine(RevString2("Hello Galaxy"));
             Console.WriteLine(RevString3("Hello Universe"));
-        }
 
+            string s5 = "Printing backwards";
+            // Starts from back and works to front printing out as it goes.
+            //Could place in method and store output to variable.
+            for (int i = 0; i < s5.Length; i++)
+            {
+                System.Console.Write(s5[s5.Length - i - 1]);
+            }
+            // Output: "sdrawkcab gnitnirP"
+        }
+        // This is my favorite, cleanest
         static string RevString1(string inputString)
         {
             string result = string.Empty;
