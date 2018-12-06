@@ -124,6 +124,59 @@ namespace StringPlayground
             //<Insert and Remove/>
 
             //</PadLeft and PadRight>
+            // Returns a new string in which the beginning of the current string
+            // is padded with white space or a specified Unicode character.
+
+            // First param takes an int that is length of string plus additional 
+            // white spaces. Here I use String.Length. 
+            Console.WriteLine(s2.PadLeft(s2.Length + 15));
+            // Output: "               It was a dark and stormy night"
+
+            // Second param takes a char and inserts it into extra space.
+            Console.WriteLine(s1.PadLeft(s2.Length + 5, '.'));
+            // Output: ".....My dear aunt Sally"
+            
+            // PadRight computes the same at the end of string.
+            Console.WriteLine(s2.PadRight(s2.Length + 15, '!'));
+            // "It was a dark and stormy night!!!!!!!!!!!!!!!"
+            
+            // Place char in variable and pass as param. 
+            char pad = '.';
+            Console.WriteLine(s1.PadRight(s1.Length + 5, pad));
+            // "Output: My dear aunt Sally....."
+            //<PadLeft and PadRight/>
+
+            //</Trim Methods>
+
+            string s5 = "     Here's a string needs trimming     ";
+
+            // Trims all leading and trailing whitespace from string. 
+            Console.WriteLine(s5.Trim());
+            // Output: "Here's a string needs trimming" 
+
+            Console.WriteLine(s5.TrimStart());
+            //Output: "Here's a string needs trimming     "
+
+            Console.WriteLine(s5.TrimEnd());
+            //Output: "     Here's a string needs trimming"
+
+            // Optionally accepts a char[] array as param
+            // with specified chars to trim.
+
+            string s6 = "*$*$*$ Hello *$*$*$";
+            char[] charsToTrim = {'$', '*', ' '};
+            Console.WriteLine(s6.Trim(charsToTrim));
+            // Output: "Hello"
+            
+            Console.WriteLine(s6.TrimStart(charsToTrim));
+            // Output: "Hello *$*$*$"
+
+            Console.WriteLine(s6.TrimEnd(charsToTrim));
+            // Output: "*$*$*$ Hello"
+
+
+
+
 
         }
     }
