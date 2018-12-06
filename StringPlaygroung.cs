@@ -21,7 +21,6 @@ namespace StringPlayground
             string s3 = "Lorem Ipsum is cool";
             string s4 = "I guess I need to know this stuff";
 
-            
             // </Array Notation>
             // You can use array notation with an index value to acquire
             // read-only access to individual characters in a string.
@@ -88,7 +87,44 @@ namespace StringPlayground
             }
             // <Compare and IndexOf/>
 
-            
+            // </Substring>
+            // Retrieves a substring.
+            // Starts at a specified character position and continues to the end of the string.
+            // Can also define ending index.
+
+            // Use IndexOf to declare a couple of placeholders
+            int d = s2.IndexOf("d");
+            int aunt = s1.IndexOf("r");
+            // Play with Substring to assemble a custom string.
+            Console.Write(s1.Substring(0, 3));
+            Console.Write(s2.Substring(d, 15));
+            Console.Write(s1.Substring(aunt + 1));
+            Console.WriteLine(s3.Substring(11));
+
+            // Output: "My dark and stormy aunt Sally is cool"
+
+            //<Substring/>
+
+            //</Insert and Remove>
+            // Returns a new string in which a specified string 
+            // is inserted at a specified index position in this instance.
+
+            Console.WriteLine(s1.Insert(7, "old and crazy "));
+            // Output: My dear old crazy aunt Sally.
+
+            Console.WriteLine(s4.Insert(28, s2.Substring(9) + " "));
+            // Output: "I guess I need to know this dark and stormy night stuff"
+
+            Console.WriteLine(s1.Remove(2, 5));
+            //Output: "My aunt Sally"
+
+            Console.WriteLine(s4.Remove(23).Insert(22, "...about strings!"));
+            // I guess I need to know...about strings!
+
+            //<Insert and Remove/>
+
+            //</PadLeft and PadRight>
+
         }
     }
 }
