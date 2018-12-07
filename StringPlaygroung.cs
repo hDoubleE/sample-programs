@@ -90,53 +90,67 @@ namespace StringPlayground
 
             // </Compare and IndexOf>
             // Let's combine the Contains and IndexOf Methods in a quick program. 
-            Console.WriteLine("Contains and IndexOf Methods Combined");
             
             string searchFor = "Aunt";
+            // Assign boolean result of searchFor word to variable.
             bool b = s1.Contains(searchFor);
-            Console.WriteLine($"{searchFor} is in the string {s1}: {b}");
-           
-            if (b) {
+
+            // Print result if word is found.
+            Console.WriteLine($"'{searchFor}' is in the string '{s1}': {b}.");
+
+            if (b)
+            {
+                // If bool is true, find index of found word and assign to variable.
                 int index = s1.IndexOf(searchFor);
-                if (index >= 0) {
-                Console.WriteLine($"{searchFor} begins at character position {index + 1}");       
+                // Handle -1 edge case.
+                if (index >= 0)
+                {
+                    // Print index position of found word.
+                    Console.WriteLine($"'{searchFor}' begins at index position {index}.");
                 }
             }
+
+            // Output:
+            // 'Aunt' is in the string 'My dear Aunt Sally': True.
+            // 'Aunt' begins at index position 8.
             // <Compare and IndexOf/>
 
             // </Substring>
-            // Retrieves a substring.
-            // Starts at a specified character position and continues to the end of the string.
-            // Can also define ending index.
+            // Retrieves a specified substring from a string.
+            // First param finds index position and continues to the end of the string.
+            // Second param specifies ending index.
 
             // Use IndexOf to declare a couple of placeholders
             int d = s2.IndexOf("d");
             int aunt = s1.IndexOf("r");
-            // Use Substrings to assemble a custom string from three source string.
+            // Use Substrings to assemble a custom string from three different source strings.
             Console.Write(s1.Substring(0, 3));
             Console.Write(s2.Substring(d, 15));
             Console.Write(s1.Substring(aunt + 1));
             Console.WriteLine(s3.Substring(11));
-            // Output: "My dark and stormy Aunt Sally is cool"
 
+            // Output: "My dark and stormy Aunt Sally is cool"
             //<Substring/>
 
             //</Insert and Remove>
             // Returns a new string in which a specified string 
-            // is inserted at a specified index position in this instance.
+            // is inserted at a specified index position.
 
+            // Insert string literal.
             Console.WriteLine(s1.Insert(7, "old and crazy "));
             // Output: My dear old crazy Aunt Sally.
 
+            // Insert Substring and " ".
             Console.WriteLine(s4.Insert(28, s2.Substring(9) + " "));
             // Output: "I guess I need to know this dark and stormy night stuff"
 
+            // Remove "dear" from string by index.
             Console.WriteLine(s1.Remove(2, 5));
             //Output: "My Aunt Sally"
 
+            // Remove end of string and Insert new end with string literal.
             Console.WriteLine(s4.Remove(23).Insert(22, "...about strings!"));
             // I guess I need to know...about strings!
-
             //<Insert and Remove/>
 
             //</PadLeft and PadRight>
@@ -170,30 +184,38 @@ namespace StringPlayground
             Console.WriteLine(s5.Trim());
             // Output: "Here's a string needs trimming" 
 
+            // Trim whitespace from front of string.
             Console.WriteLine(s5.TrimStart());
             //Output: "Here's a string needs trimming     "
 
+            // Trim whitespace from end of string.
             Console.WriteLine(s5.TrimEnd());
             //Output: "     Here's a string needs trimming"
 
             // Optionally accepts a char[] array as param
             // with specified chars to trim.
 
+            // Start with a new string.
             string s6 = "*$*$*$ Hello *$*$*$";
+
+            // Place chars to remove into char array.
             char[] charsToTrim = {'$', '*', ' '};
+            
+            // Trim char arry character from string.
             Console.WriteLine(s6.Trim(charsToTrim));
             // Output: "Hello"
             
+            // TrimStart
             Console.WriteLine(s6.TrimStart(charsToTrim));
             // Output: "Hello *$*$*$"
 
+            // TrimEnd
             Console.WriteLine(s6.TrimEnd(charsToTrim));
             // Output: "*$*$*$ Hello"
 
+            // <Trim Methods/>
 
-
-
-
+            // That's all folks!
         }
     }
 }
