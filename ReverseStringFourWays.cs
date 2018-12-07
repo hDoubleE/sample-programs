@@ -10,9 +10,9 @@ using System;
 
 namespace ReverseString
 {
-        class ReverseStringsThreeWays
+    class ReverseStringsThreeWays
     {
-                static void Main()
+        static void Main()
         {
             Console.WriteLine(RevString1("Hello World"));
             Console.WriteLine(RevString2("Hello Solar System"));
@@ -43,7 +43,6 @@ namespace ReverseString
         // 1. result = H + ""
         // 2. result = e + H
         // 3. result = l + eH...
-
 
         // RevString2 starts from the end of string and works toward beginning.
         private static string RevString2(string s)
@@ -84,8 +83,10 @@ namespace ReverseString
         {
             // Convert input string to char array.
             char[] arr = s.ToCharArray();
+
             // Reverse Array
             Array.Reverse(arr);
+            
             // Return as new string or print using ToString method.
             return new string(arr);
         }

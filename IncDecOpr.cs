@@ -5,8 +5,6 @@
  * Trevor Heehs
  */
 
-
-
 using System;
 
 namespace IncDec
@@ -24,13 +22,13 @@ namespace IncDec
             // Print x(1)
             Console.WriteLine(x);
 
-            // Increment x, x is now 2, then print x(2).
+            // Increment x, x is now 2, then print.
 			Console.WriteLine(++x);
 
             // Print x(still 2), then decrement, x is now 1. 
             Console.WriteLine(x--);
 
-            // Print x(1) 
+            // Print x(1). 
             Console.WriteLine(x);
 
             // Decrement x, x is now 0, then print.
